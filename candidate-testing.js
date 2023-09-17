@@ -23,14 +23,18 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
+let candidateAnswer=input.question("Who was the first American woman in space?");
 
 }
 
 function gradeQuiz(candidateAnswers) {
-
+e
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
+ if (candidateAnswer = "Sally Ride");  { 
+  console.log("correct");
+} else  { 
+   console.log('incorrect'); 
+}
 
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
@@ -42,7 +46,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("\nHello," + candidateName););
+   console.log("\nHello," + candidateName);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
