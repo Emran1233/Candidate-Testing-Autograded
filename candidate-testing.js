@@ -31,7 +31,7 @@ function askQuestion() {
 }
 
 function gradeQuiz(candidateAnswers) {
-
+  let number = 0;
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   for (i = 0; i < questions.length; i++) {
     console.log(`\n${i + 1})${questions[i]}\nYour Answer:${candidateAnswers[i]}\nCorrect Answer: ${correctAnswers[i]}`);
@@ -43,19 +43,15 @@ function gradeQuiz(candidateAnswers) {
     }
   }
   
-
-
-
-
-if (candidateAnswer === correctAnswer) { 
-  console.log("Correct");
-} else  { 
-   console.log("Incorrect"); 
-}
-
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
+  
+   //TODO 3.2 use this variable to calculate the candidates score.
+   let grade = (number / questions.length) * 100; 
+     console.log(`\n Scored Grade:${grade}% (${number} of ${questions.length}) responses correct`);
+  if (grade >= 80) {
+    console.log("PASSED");
+  } else {
+    console.log("FAILED");
+  }
 
   return grade;
 }
